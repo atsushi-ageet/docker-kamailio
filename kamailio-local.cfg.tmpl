@@ -1,0 +1,8 @@
+#!define WITH_NAT
+#!define WITH_TLS
+listen=udp:lo:5060 advertise {{ var "EXTERNAL_IP" }}:5060
+listen=tcp:lo:5060 advertise {{ var "EXTERNAL_IP" }}:5060
+listen=tls:lo:5061 advertise {{ var "EXTERNAL_IP" }}:5061
+listen=udp:eth0:5060 advertise {{ var "EXTERNAL_IP" }}:5060
+listen=tcp:eth0:5060 advertise {{ var "EXTERNAL_IP" }}:5060
+listen=tls:eth0:5061 advertise {{ var "EXTERNAL_IP" }}:5061

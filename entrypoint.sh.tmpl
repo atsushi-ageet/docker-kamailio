@@ -1,0 +1,3 @@
+#!/bin/sh
+rtpproxy -l {{ var "EXTERNAL_IP" }} -s udp:localhost:7722 -F
+kamailio -DD -E
